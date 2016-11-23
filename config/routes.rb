@@ -3,8 +3,7 @@ Rails.application.routes.draw do
   # In config/routes.rb
   root "photos#index"
 
-  #Routs for the User list
-  get "/users", :controller => "users", :action => "index"
+
 
   # Routes for the Comment resource:
   # CREATE
@@ -58,6 +57,12 @@ Rails.application.routes.draw do
   #------------------------------
 
   devise_for :users
+
+  #Routes for the User list
+  get "/users", :controller => "users", :action => "index"
+
+  #Routes for User Pages
+  get "/users/:id", :controller => "users", :action => "show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

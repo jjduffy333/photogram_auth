@@ -1,0 +1,9 @@
+<div class="page-header">
+  <h3> <%= @user.username %></h3>
+</div>
+
+<% @user.photos.each do |photo| %>
+
+<img src = "<%= photo.image%>" width="200" height="120">
+<a href = "/photos/<%= photo.id %>"><%= photo.id %>>
+<% end %>
