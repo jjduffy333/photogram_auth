@@ -12,9 +12,10 @@ class LikesController < ApplicationController
   end
 
   def mylikes
-    @like = 
+    @photos = Photo.all
 
-  end
+    render("likes/mylikes.html.erb")
+    end
 
   def new
     @like = Like.new
