@@ -11,6 +11,11 @@ class LikesController < ApplicationController
     render("likes/show.html.erb")
   end
 
+  def mylikes
+    @like = 
+
+  end
+
   def new
     @like = Like.new
 
